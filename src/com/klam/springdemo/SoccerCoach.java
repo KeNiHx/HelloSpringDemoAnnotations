@@ -1,11 +1,16 @@
 package com.klam.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class SoccerCoach implements Coach {
 	
+	
+	//Field level injection
+	//@Autowired
+	//@Qualifier("happyFortuneService")
 	private FortuneService fortuneService;
 	
 	// define a default constructor
@@ -15,11 +20,13 @@ public class SoccerCoach implements Coach {
 	}
 	
 	//define a setter method
+	/*
 	@Autowired
 	public void setFortuneService(FortuneService theFortuneService) {
 		System.out.println(">> SoccerCoach: inside setFortuneService() method");
 		fortuneService = theFortuneService;
-	}	
+	}
+	*/	
 	
 	
 	/* Constructor Injection
