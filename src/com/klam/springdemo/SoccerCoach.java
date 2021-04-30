@@ -8,10 +8,28 @@ public class SoccerCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
+	// define a default constructor
+	public SoccerCoach() {
+		System.out.println(">> SoccerCoach: inside default constructor");
+	
+	}
+	
+	//define a setter method
+	@Autowired
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println(">> SoccerCoach: inside setFortuneService() method");
+		fortuneService = theFortuneService;
+	}	
+	
+	
+	/* Constructor Injection
 	@Autowired
 	public SoccerCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
+	*/
+	
+	
 	
 	@Override
 	public String getDailyWorkout() {
